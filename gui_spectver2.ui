@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1430</width>
+    <height>861</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Spectrometer v2.0</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="buttonStart">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>50</y>
+      <width>75</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Start   </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonStop">
+    <property name="geometry">
+     <rect>
+      <x>1300</x>
+      <y>50</y>
+      <width>75</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Stop </string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1220</x>
+      <y>80</y>
+      <width>191</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Brightness</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QSlider" name="sliderCont">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+       <property name="tickInterval">
+        <number>50</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QSlider" name="sliderSat">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+       <property name="tickInterval">
+        <number>50</number>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>White Balance</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="0">
+      <widget class="QSlider" name="sliderWB">
+       <property name="maximum">
+        <number>10000</number>
+       </property>
+       <property name="singleStep">
+        <number>500</number>
+       </property>
+       <property name="pageStep">
+        <number>1000</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1000</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QSlider" name="sliderBright">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+       <property name="tickInterval">
+        <number>50</number>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QSlider" name="sliderGain">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+       <property name="tickInterval">
+        <number>50</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Saturation</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="0">
+      <widget class="QSlider" name="sliderExpo">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>7</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Gain</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Contrast</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Exposure</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="buttonCalibrate">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>490</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Normalize</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1191</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Calibration</string>
+     </attribute>
+     <widget class="GraphicsView" name="figure3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>4</y>
+        <width>1024</width>
+        <height>768</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>120</y>
+        <width>141</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>ROI Settings:</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>121</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Max. Col:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>Min. Row:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Min. Col:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>Max.Row:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="line_mincol"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="line_maxcol"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="line_minrow"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="line_maxrow"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="buttonUpdateROI">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>170</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Update ROI</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>70</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clicked at:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="coor">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>90</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>(0,0)</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>340</y>
+        <width>141</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Projection Settings:</string>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>131</width>
+         <height>176</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,0,0,0,0,0,0">
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>Low Wavelength (nm):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>High Wavelength (nm):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="laserHigh"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Projection Column:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLineEdit" name="projHigh"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Projection Column:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLineEdit" name="laserLow"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLineEdit" name="projLow"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="buttonUpdateProjection">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>200</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Update Proj.</string>
+       </property>
+      </widget>
+      <zorder>gridLayoutWidget_2</zorder>
+      <zorder>laserLow</zorder>
+      <zorder>buttonUpdateProjection</zorder>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Analysis</string>
+     </attribute>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>178</x>
+        <y>607</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Filename:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineFilename">
+      <property name="geometry">
+       <rect>
+        <x>228</x>
+        <y>600</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGrab">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>600</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save Spectrum Data</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>800</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="GraphicsView" name="figure1">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>30</y>
+         <width>600</width>
+         <height>200</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="PlotWidget" name="figure2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>240</y>
+         <width>660</width>
+         <height>196</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+      </widget>
+     </widget>
+     <zorder>label_7</zorder>
+     <zorder>buttonCalibrate</zorder>
+     <zorder>lineFilename</zorder>
+     <zorder>buttonGrab</zorder>
+     <zorder>label_7</zorder>
+     <zorder>lineFilename</zorder>
+     <zorder>buttonGrab</zorder>
+     <zorder>groupBox_2</zorder>
+    </widget>
+   </widget>
+   <zorder>buttonStart</zorder>
+   <zorder>buttonStop</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>buttonCalibrate</zorder>
+   <zorder>label</zorder>
+   <zorder>tabWidget</zorder>
+   <zorder>figure3</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1430</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">pyqtgraph</header>
+  </customwidget>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>figure1</tabstop>
+  <tabstop>sliderGain</tabstop>
+  <tabstop>buttonStart</tabstop>
+  <tabstop>sliderExpo</tabstop>
+  <tabstop>figure2</tabstop>
+  <tabstop>sliderSat</tabstop>
+  <tabstop>sliderCont</tabstop>
+  <tabstop>sliderBright</tabstop>
+  <tabstop>buttonStop</tabstop>
+  <tabstop>sliderWB</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
