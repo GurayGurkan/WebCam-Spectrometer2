@@ -124,7 +124,7 @@ class Spect(QMainWindow,gui_spectver2.Ui_MainWindow):
             
         if cv2.imwrite(ad+'.jpeg', self.grabbed):
             np.savetxt(ad+'.txt', np.vstack((self.wavelengths,self.globalSpectrum)).T, fmt='%.3f',delimiter=',')
-            self.timer1.start(50)
+            self.timer1.start(100)
         else:
             print 'Failed'
             
@@ -158,8 +158,7 @@ class Spect(QMainWindow,gui_spectver2.Ui_MainWindow):
             spectrum_n = spectrum/(raw.shape[0]*3*255.)
             self.rawSpectrum = spectrum
             self.globalSpectrum = self.rawSpectrum # * self.calibVect
-            
-        
+            #elf.row.setData(self.globalSpectrum)
             self.row.setData(self.wavelengths,self.globalSpectrum)
             
             
@@ -249,7 +248,10 @@ class Spect(QMainWindow,gui_spectver2.Ui_MainWindow):
         a = (L1 - L2)/(float(x1-x2))
         b = (L2*x1-L1*x2)/float(x1-x2)
         Lmin = b
+        
         Lmax = a*(length-1)+b
+        print b,a,Lmax
+        
         self.wavelengths = np.linspace(Lmin,Lmax,length)
         
         
